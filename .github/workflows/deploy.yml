@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
       - name: Setup Node.js
@@ -17,10 +17,10 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm ci
 
-      - name: Build and Export
+      - name: Build and Export Site
         run: npm run build && touch out/.nojekyll
 
       - name: Deploy to GitHub Pages
@@ -28,3 +28,4 @@ jobs:
         with:
           branch: gh-pages
           folder: out
+          clean: true
