@@ -51,7 +51,7 @@ const AboutMe = () => {
             className="md:w-1/3 mb-8 md:mb-0"
           >
             <Image
-              src="/placeholder.svg?height=400&width=400"
+              src="/profile.jpeg?height=400&width=400"
               alt="Harshdeep Johi"
               width={400}
               height={400}
