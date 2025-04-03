@@ -10,7 +10,7 @@ const Hero = () => {
     <section id="home" className="relative flex items-center justify-center min-h-screen overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/placeholder.svg?height=1080&width=1920"
+          src="/heroBackground.jpg?height=1080&width=1920"
           alt="Background"
           layout="fill"
           objectFit="cover"
