@@ -8,11 +8,11 @@ import { ExternalLink, Github } from 'lucide-react'
 const Projects = () => {
   const projects = [
     {
-      title: 'E-commerce Platform',
-      description: 'A full-stack e-commerce platform built with React, Node.js, and MongoDB.',
-      image: '/placeholder.svg?height=200&width=300',
-      github: 'https://github.com',
-      live: 'https://example.com',
+      title: 'Earth-Trek',
+      description: 'Visualizing the planet\'s CO2 footprint with interactive D3.js',
+      image: '/earth-trek.png?height=200&width=300',
+      github: 'https://github.com/dev-harshdeep/earth-trek',
+      live: 'https://harshdeepjoshi.in/earth-trek/',
     },
     {
       title: 'Weather App',
