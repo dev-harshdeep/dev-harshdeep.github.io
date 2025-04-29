@@ -19,14 +19,38 @@ const Contact = () => {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the form data to a server
-    console.log('Form submitted:', formData)
-    // Reset form after submission
-    setFormData({ name: '', email: '', message: '' })
+    
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/91f8faafd91a560a2d67f5ecd8b03eb2', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: 'New Portfolio Contact Submission', // Optional: Custom subject
+          _template: 'table' // Optional: Better email formatting
+        })
+      })
+
+      if (response.ok) {
+        alert('Message sent successfully!')
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        throw new Error('Failed to send message')
+      }
+    } catch (error) {
+      console.error(error)
+      alert('Failed to send message. Please try again later.')
+    }
   }
 
+  
   return (
     <section id="contact" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
