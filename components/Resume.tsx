@@ -18,7 +18,7 @@ const Resume = () => {
             Get a comprehensive overview of my skills, experience, and educational background by downloading my resume.
           </p>
           <motion.a
-            href="/path-to-your-resume.pdf"
+            href="/Resume_HarshdeepJoshi.pdf"
             download
             className="inline-flex items-center bg-gradient-to-r from-teal-500 to-blue-500 text-white px-8 py-3 rounded-full font-semibold hover:from-teal-600 hover:to-blue-600 transition duration-300"
             whileHover={{ scale: 1.05 }}
